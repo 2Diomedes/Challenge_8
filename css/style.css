@@ -1,2 +1,86 @@
-.grid{display:grid;grid-template-columns:1fr}.header{background:red}.images{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"a b" "c c" "d e" "f f"}.images .one{grid-area:a}.images .two{grid-area:b}.images .three{grid-area:c}.images .four{grid-area:d}.images .five{grid-area:e}.images .six{grid-area:f}.images div{background:lightgrey;border:1px black solid}.images div:nth-child(odd){background:grey}
+/*-------------------- Mobile --------------------*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px, auto); }
+  .grid div {
+    background-color: grey;
+    border: 1px solid black; }
+
+.header {
+  background: red; }
+
+.images {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .images .three {
+    grid-column: 1/3; }
+  .images .six {
+    grid-column: 1/3; }
+
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .benefits .ourB {
+    grid-column: 1/3; }
+
+/*-------------------- Mobile --------------------*/
+/*-------------------- Tablette --------------------*/
+@media screen and (min-width: 750px) {
+  .services {
+    grid-template-columns: 1fr 1fr; }
+    .services .ourS,
+    .services .third {
+      grid-column: 1/3; }
+
+  .products {
+    grid-template-columns: 1fr 1fr; }
+    .products .ourP,
+    .products .third {
+      grid-column: 1/3; } }
+/*-------------------- Tablette --------------------*/
+/*-------------------- Bureau --------------------*/
+@media screen and (min-width: 1080px) {
+  .images {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "a b c d" "e e f f"; }
+    .images .one {
+      grid-area: a; }
+    .images .two {
+      grid-area: b; }
+    .images .three {
+      grid-area: e; }
+    .images .four {
+      grid-area: c; }
+    .images .five {
+      grid-area: d; }
+    .images .six {
+      grid-area: f; }
+
+  .services {
+    grid-template-columns: 1fr 1fr 1fr; }
+    .services .third {
+      grid-column: auto; }
+    .services .ourS {
+      grid-column: 1/4; }
+
+  .products {
+    grid-template-columns: 1fr 1fr 1fr; }
+    .products .third {
+      grid-column: auto; }
+    .products .ourP {
+      grid-column: 1/4; }
+
+  .benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .benefits .ourB {
+      grid-column: 1/4; }
+
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr; }
+    .footer .copy {
+      grid-column: 1/4; } }
+/*-------------------- Bureau --------------------*/
+
 /*# sourceMappingURL=style.css.map */

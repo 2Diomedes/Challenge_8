@@ -2,6 +2,12 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px, auto);
+
+  div {
+    background-color: grey;
+    border: 1px solid black;
+  }
 }
 
 .header {
@@ -11,34 +17,13 @@
 .images {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "a b" "c c" "d e" "f f";
 
-  .one {
-    grid-area: a;
-  }
-  .two {
-    grid-area: b;
-  }
   .three {
-    grid-area: c;
+    grid-column: 1/3;
   }
-  .four {
-    grid-area: d;
-  }
-  .five {
-    grid-area: e;
-  }
+
   .six {
-    grid-area: f;
-  }
-
-  div {
-    background: lightgrey;
-    border: 1px black solid;
-  }
-
-  div:nth-child(odd) {
-    background: grey;
+    grid-column: 1/3;
   }
 }
 
@@ -46,11 +31,103 @@
 
 .products {}
 
-.benefits {}
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .ourB {
+    grid-column: 1/3;
+  }
+}
 
 .footer {}
 /*-------------------- Mobile --------------------*/
 /*-------------------- Tablette --------------------*/
+@media screen and (min-width:750px) {
+  .services {
+    grid-template-columns: 1fr 1fr;
+
+    .ourS,
+    .third {
+      grid-column: 1/3;
+    }
+  }
+
+  .products {
+    grid-template-columns: 1fr 1fr;
+
+    .ourP,
+    .third {
+      grid-column: 1/3;
+    }
+  }
+}
 /*-------------------- Tablette --------------------*/
 /*-------------------- Bureau --------------------*/
+@media screen and (min-width:1080px) {
+  .images {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "a b c d" "e e f f";
+
+    .one {
+      grid-area: a;
+    }
+
+    .two {
+      grid-area: b;
+    }
+
+    .three {
+      grid-area: e;
+
+    }
+
+    .four {
+      grid-area: c;
+    }
+
+    .five {
+      grid-area: d;
+    }
+
+    .six {
+      grid-area: f;
+    }
+  }
+  .services {
+      grid-template-columns: 1fr 1fr 1fr;
+    .third {
+    grid-column:auto;
+    }
+    .ourS,
+      {
+      grid-column: 1/4;
+    }
+  }
+  .products {
+      grid-template-columns: 1fr 1fr 1fr;
+    .third {
+    grid-column:auto;
+    }
+    .ourP,
+      {
+      grid-column: 1/4;
+    }
+  }
+  .benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .ourB {
+      grid-column: 1/4;
+    }
+  }
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    .copy {
+      grid-column: 1/4;
+    }
+  }
+
+}
 /*-------------------- Bureau --------------------*/
