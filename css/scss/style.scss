@@ -1,0 +1,56 @@
+/*-------------------- Mobile --------------------*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.header {
+  background: red;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "a b" "c c" "d e" "f f";
+
+  .one {
+    grid-area: a;
+  }
+  .two {
+    grid-area: b;
+  }
+  .three {
+    grid-area: c;
+  }
+  .four {
+    grid-area: d;
+  }
+  .five {
+    grid-area: e;
+  }
+  .six {
+    grid-area: f;
+  }
+
+  div {
+    background: lightgrey;
+    border: 1px black solid;
+  }
+
+  div:nth-child(odd) {
+    background: grey;
+  }
+}
+
+.services {}
+
+.products {}
+
+.benefits {}
+
+.footer {}
+/*-------------------- Mobile --------------------*/
+/*-------------------- Tablette --------------------*/
+/*-------------------- Tablette --------------------*/
+/*-------------------- Bureau --------------------*/
+/*-------------------- Bureau --------------------*/

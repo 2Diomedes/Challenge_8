@@ -1,0 +1,2 @@
+.grid{display:grid;grid-template-columns:1fr}.header{background:red}.images{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"a b" "c c" "d e" "f f"}.images .one{grid-area:a}.images .two{grid-area:b}.images .three{grid-area:c}.images .four{grid-area:d}.images .five{grid-area:e}.images .six{grid-area:f}.images div{background:lightgrey;border:1px black solid}.images div:nth-child(odd){background:grey}
+/*# sourceMappingURL=style.css.map */
