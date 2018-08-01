@@ -1,4 +1,14 @@
+@mixin marginGen() {
+  margin-left: 6em;
+  margin-right: 6em;
+}
+
+
 /*-------------------- Mobile --------------------*/
+img {
+  width: 100%;
+  height: auto;
+}
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -12,7 +22,12 @@
 .header {
   background-image: url("../img/hero_bg_2.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
+  height: 70vh;
+  nav {
+    color: white;
+    @include marginGen;
+  }
 }
 
 .images {
@@ -28,11 +43,43 @@
   }
 }
 
-.services {}
+.services {
+  @include marginGen;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  grid-gap: 2em;
+  .arcticleS {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 12px #555;
+    padding: 1.5em;
+    i {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 1em;
+    }
+    h3 {
+    margin-bottom: 0.2em;
+    }
+  }
+  .button {
+    text-align: center;
+    p {
+      padding: 1em;
+      background-color: pink;
+      width: 20%;
+      border: solid black 1px;
+      margin: auto;
+    }
+  }
+}
 
-.products {}
+.products {
+  @include marginGen;
+}
 
 .benefits {
+  @include marginGen;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -41,7 +88,9 @@
   }
 }
 
-.footer {}
+.footer {
+  @include marginGen;
+}
 /*-------------------- Mobile --------------------*/
 /*-------------------- Tablette --------------------*/
 @media screen and (min-width:750px) {
