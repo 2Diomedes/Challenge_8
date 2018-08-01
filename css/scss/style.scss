@@ -2,31 +2,49 @@
   margin-left: 6em;
   margin-right: 6em;
 }
-
-
 /*-------------------- Mobile --------------------*/
 img {
   width: 100%;
   height: auto;
 }
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(100px, auto);
-
-  div {
-    border: 1px solid black;
-  }
 }
 
 .header {
-  background-image: url("../img/hero_bg_2.jpg");
-  background-repeat: no-repeat;
-  background-size:cover;
+  // background-image: url("../img/hero_bg_2.jpg");
+  // background-repeat: no-repeat;
+  // background-size:cover;
+  background: linear-gradient(50deg, purple, orange);
   height: 70vh;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-weight: lighter;
+
   nav {
     color: white;
     @include marginGen;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+
+      li {
+        list-style-type: none;
+        margin-right: 1em;
+      }
+    }
+  }
+  .headerT {
+    @include marginGen;
+    width: 50%;
+    h2 {
+      font-size: 4.2em;
+    }
   }
 }
 
@@ -48,22 +66,27 @@ img {
   margin-top: 4em;
   margin-bottom: 4em;
   grid-gap: 2em;
+
   .arcticleS {
     display: flex;
     flex-direction: column;
     box-shadow: 1px 1px 12px #555;
     padding: 1.5em;
+
     i {
-    font-size: 2em;
-    text-align: center;
-    padding-bottom: 1em;
+      font-size: 2em;
+      text-align: center;
+      padding-bottom: 1em;
     }
+
     h3 {
-    margin-bottom: 0.2em;
+      margin-bottom: 0.2em;
     }
   }
+
   .button {
     text-align: center;
+
     p {
       padding: 1em;
       background-color: pink;
@@ -129,7 +152,6 @@ img {
 
     .three {
       grid-area: e;
-
     }
 
     .four {
@@ -144,26 +166,33 @@ img {
       grid-area: f;
     }
   }
+
   .services {
-      grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
     .third {
-    grid-column:auto;
+      grid-column: auto;
     }
-    .ourS,
-      {
+
+
+    .ourS {
       grid-column: 1/4;
     }
   }
+
   .products {
-      grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
     .third {
-    grid-column:auto;
+      grid-column: auto;
     }
-    .ourP,
-      {
+
+
+    .ourP {
       grid-column: 1/4;
     }
   }
+
   .benefits {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -172,12 +201,13 @@ img {
       grid-column: 1/4;
     }
   }
+
   .footer {
     grid-template-columns: 1fr 1fr 1fr;
+
     .copy {
       grid-column: 1/4;
     }
   }
-
 }
 /*-------------------- Bureau --------------------*/
